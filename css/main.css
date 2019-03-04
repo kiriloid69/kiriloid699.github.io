@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background-image: url("../img/bg1.png");
+    background-image: url("../img/bg1.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -366,7 +366,7 @@ table {
 }
 
 .section2 {
-    background: url("../img/house.png") no-repeat left top / cover;
+    background: url("../img/house.jpg") no-repeat left top / cover;
 }
 
 .center-button {
@@ -525,7 +525,7 @@ table {
 }
 
 .section4 {
-    background:  url("../img/bg3.png") no-repeat center top / cover;
+    background:  url("../img/bg3.jpg") no-repeat center top / cover;
 }
 
 .main-photo {
@@ -728,7 +728,7 @@ form {
 }
 
 .section5 {
-    background: url(../img/bg4.png) no-repeat center top / cover;
+    background: url(../img/bg4.jpg) no-repeat center top / cover;
 }
 
 .photo {
