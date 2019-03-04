@@ -1380,6 +1380,11 @@ footer {
     
 @media screen and (max-width: 375px) {
     
+    .green-button {
+        margin-left: 4%;
+        margin-bottom: 20px;
+    }
+    
     input {
         width: 300px;
         font-size: 18px;
