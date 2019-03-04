@@ -18,19 +18,58 @@ function slowScrollHouse (id) {
 $('.slides').slick({
     dots: true,
     infinite: false,
-    autoplay: true,
-    speed: 1000,
+    autoplay: false,
+    speed: 1500,
     pauseOnHover: true
 });
 
+//$('.menu-btn').on('click', function(e) {
+//  e.preventDefault;
+//  $(this).toggleClass('menu-btn_active');
+//});
+//
+//$('.menu-btn').click(function(){
+//  $('.menu').toggleClass('menu_opened');
+//})
+//$(document).click(function(event) {
+//    if ($(event.target).closest(".menu").length ) return;
+//    $('.menu').removeClass('menu_opened');
+//    event.stopPropagation();
+//});
+
+$(document).ready(function() {
+		$(document).delegate('.open', 'click', function(event){
+			$(this).addClass('oppenned');
+			event.stopPropagation();
+		})
+		$(document).delegate('body', 'click', function(event) {
+			$('.open').removeClass('oppenned');
+		})
+		$(document).delegate('.cls', 'click', function(event){
+			$('.open').removeClass('oppenned');
+			event.stopPropagation();
+		});
+	});
+
+
+
+
+
+$(window).scroll(function(){
+	$('.popup-politics').css({'top': $(window).scrollTop() + 70})
+});
+
 $('.politics').click(function(){
-	$('.popup-politics').css({'top': $(window).scrollTop() +130}).addClass('active').fadeIn();
+	$('.popup-politics').css({'top': $(window).scrollTop() + 70}).addClass('active').fadeIn();
 	$('.bg-popup').fadeIn();
+	$('.gotoup').fadeOut();
+    
 });
 
 $('.coast').click(function(){
-	$('.popup-table').css({'top': $(window).scrollTop() +130}).addClass('active').fadeIn();
+	$('.popup-table').css({'top': $(window).scrollTop() +70}).addClass('active').fadeIn();
 	$('.bg-popup').fadeIn();
+    $('.gotoup').fadeOut();
 });
 
 $(window).scroll(function(){
@@ -38,24 +77,28 @@ $(window).scroll(function(){
 });
 
 $('.d135').click(function(){
-	$('.house1').css({'top': $(window).scrollTop() +130}).addClass('active').fadeIn();
+	$('.house1').css({'top': $(window).scrollTop() +70}).addClass('active').fadeIn();
 	$('.bg-popup').fadeIn();
+    $('.gotoup').fadeOut();
 });
 
 $('.d131').click(function(){
-	$('.house2').css({'top': $(window).scrollTop() +130}).addClass('active').fadeIn();
+	$('.house2').css({'top': $(window).scrollTop() +70}).addClass('active').fadeIn();
 	$('.bg-popup').fadeIn();
+    $('.gotoup').fadeOut();
 });    
 
 
 $('.d136').click(function(){
-	$('.house3').css({'top': $(window).scrollTop() +130}).addClass('active').fadeIn();
+	$('.house3').css({'top': $(window).scrollTop() +70}).addClass('active').fadeIn();
 	$('.bg-popup').fadeIn();
+    $('.gotoup').fadeOut();
 });
 
 $('.d117').click(function(){
 	$('.house4').css({'top': $(window).scrollTop() +130}).addClass('active').fadeIn();
 	$('.bg-popup').fadeIn();
+    $('.gotoup').fadeOut();
 });
 
 $('.b-close').click(function(){
@@ -63,6 +106,7 @@ $('.b-close').click(function(){
 	$('.popup-politics').removeClass('active').fadeOut();
 	$('.popup-table').removeClass('active').fadeOut();
 	$('.bg-popup').fadeOut();
+    $('.gotoup').fadeIn();
 });
 
 $('.bg-popup').click(function(){
@@ -70,22 +114,23 @@ $('.bg-popup').click(function(){
     $('.popup-politics').removeClass('active').fadeOut();
     $('.popup-table').removeClass('active').fadeOut();
 	$('.bg-popup').fadeOut();
+    $('.gotoup').fadeIn();
 });
 
 $('.go-d135').click(function(){
-	$('.house1').css({'top': $(window).scrollTop() +130}).addClass('active').fadeToggle();
+	$('.house1').css({'top': $(window).scrollTop() +70}).addClass('active').fadeToggle();
 });
 
 $('.go-d131').click(function(){
-	$('.house2').css({'top': $(window).scrollTop() +130}).addClass('active').fadeToggle();
+	$('.house2').css({'top': $(window).scrollTop() +70}).addClass('active').fadeToggle();
 });
 
 $('.go-d136').click(function(){
-	$('.house3').css({'top': $(window).scrollTop() +130}).addClass('active').fadeToggle();
+	$('.house3').css({'top': $(window).scrollTop() +70}).addClass('active').fadeToggle();
 });
 
 $('.go-d117').click(function(){
-	$('.house4').css({'top': $(window).scrollTop() +130}).addClass('active').fadeToggle();
+	$('.house4').css({'top': $(window).scrollTop() +70}).addClass('active').fadeToggle();
 });
 
 
